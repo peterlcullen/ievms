@@ -309,7 +309,7 @@ build_ievm() {
     unset archive
     unset unit
     case $1 in
-        6|7|8)
+        6|7)
             os="WinXP"
             if [ "${reuse_xp}" != "yes" ]
             then
@@ -322,7 +322,7 @@ build_ievm() {
             fi
             ;;
         9) os="Win7" ;;
-        10|11)
+        8|10|11)
             if [ "${reuse_win7}" != "yes" ]
             then
                 if [ "$1" == "11" ]; then fail "IE11 is only available if REUSE_WIN7 is set"; fi
